@@ -169,7 +169,7 @@ export const HeaderNavigationBase = ({
                             <a
                                 aria-label="Go to homepage"
                                 href="/"
-                                className="rounded-xs outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2"
+                                className="rounded-xxs outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2"
                             >
                                 <UntitledLogo className="h-6" />
                             </a>

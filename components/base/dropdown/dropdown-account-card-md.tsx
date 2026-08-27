@@ -17,7 +17,7 @@ export const DropdownAccountCardMD = () => {
             <AriaButton
                 className={({ isPressed, isFocusVisible }) =>
                     cx(
-                        "relative w-60 cursor-pointer rounded-lg bg-primary_alt p-2 text-left inset-ring-1 inset-ring-border-secondary outline-offset-2 outline-focus-ring",
+                        "relative w-60 cursor-pointer rounded-md bg-primary_alt p-2 text-left inset-ring-1 inset-ring-border-secondary outline-offset-2 outline-focus-ring",
                         (isPressed || isFocusVisible) && "outline-2",
                     )
                 }
@@ -30,7 +30,7 @@ export const DropdownAccountCardMD = () => {
                     subtitle="olivia@untitledui.com"
                 />
 
-                <div className="absolute top-2 right-2 flex size-7 items-center justify-center rounded-md">
+                <div className="absolute top-2 right-2 flex size-7 items-center justify-center rounded-sm">
                     <ChevronSelectorVertical className="size-4 shrink-0 stroke-[2.25px] text-fg-quaternary" />
                 </div>
             </AriaButton>

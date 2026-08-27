@@ -280,7 +280,7 @@ const InnerTagSelect = ({ isDisabled, shortcut, shortcutClassName, placeholder, 
                     <span
                         key={value.id}
                         className={cx(
-                            "flex min-w-0 items-center rounded-md bg-primary ring-1 ring-primary ring-inset",
+                            "flex min-w-0 items-center rounded-sm bg-primary ring-1 ring-primary ring-inset",
                             size === "sm" ? "px-1 py-0.75" : "py-0.5 pr-1 pl-1.25",
                         )}
                     >
@@ -360,7 +360,7 @@ export const TagSelectTagsValue = ({
             {...otherProps}
             className={({ isFocusWithin, isDisabled }) =>
                 cx(
-                    "relative flex w-full items-center rounded-lg bg-primary shadow-xs ring-1 ring-primary outline-hidden transition duration-100 ease-linear ring-inset",
+                    "relative flex w-full items-center rounded-md bg-primary shadow-xs ring-1 ring-primary outline-hidden transition duration-100 ease-linear ring-inset",
                     isDisabled && "cursor-not-allowed opacity-50",
                     isFocusWithin && "ring-2 ring-brand",
 

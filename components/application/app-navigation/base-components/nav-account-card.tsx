@@ -2,9 +2,9 @@
 
 import type { FC, HTMLAttributes } from "react";
 import { useCallback, useEffect, useRef } from "react";
-import type { Placement } from "@react-types/overlays";
 import { BookOpen01, ChevronSelectorVertical, LogOut01, Plus, Settings01, User01 } from "@untitledui/icons";
 import { useFocusManager } from "react-aria";
+import type { Placement as AriaPlacement } from "react-aria-components";
 import type { DialogProps as AriaDialogProps } from "react-aria-components";
 import { Button as AriaButton, Dialog as AriaDialog, DialogTrigger as AriaDialogTrigger, Popover as AriaPopover } from "react-aria-components";
 import { AvatarLabelGroup } from "@/components/base/avatar/avatar-label-group";
@@ -98,7 +98,7 @@ export const NavAccountMenu = ({
                             <button
                                 key={account.id}
                                 className={cx(
-                                    "relative w-full cursor-pointer rounded-md px-2 py-1.5 text-left outline-focus-ring transition duration-100 ease-linear hover:bg-primary_hover focus:z-10 focus-visible:outline-2 focus-visible:outline-offset-2",
+                                    "relative w-full cursor-pointer rounded-sm px-2 py-1.5 text-left outline-focus-ring transition duration-100 ease-linear hover:bg-primary_hover focus:z-10 focus-visible:outline-2 focus-visible:outline-offset-2",
                                     account.id === selectedAccountId && "bg-primary_hover",
                                 )}
                             >
@@ -137,7 +137,7 @@ const NavAccountCardMenuItem = ({
         <button {...buttonProps} className={cx("group/item w-full cursor-pointer px-1.5 focus:outline-hidden", buttonProps.className)}>
             <div
                 className={cx(
-                    "flex w-full items-center justify-between gap-3 rounded-md p-2 group-hover/item:bg-primary_hover",
+                    "flex w-full items-center justify-between gap-3 rounded-sm p-2 group-hover/item:bg-primary_hover",
                     // Focus styles.
                     "outline-focus-ring group-focus-visible/item:outline-2 group-focus-visible/item:outline-offset-2",
                 )}
@@ -160,7 +160,7 @@ export const NavAccountCard = ({
     items = placeholderAccounts,
     avatarRounded,
 }: {
-    popoverPlacement?: Placement;
+    popoverPlacement?: AriaPlacement;
     selectedAccountId?: string;
     items?: NavAccountType[];
     avatarRounded?: boolean;
@@ -187,7 +187,7 @@ export const NavAccountCard = ({
             />
 
             <AriaDialogTrigger>
-                <AriaButton className="absolute top-2 right-2 flex cursor-pointer items-center justify-center rounded-md p-1.5 text-fg-quaternary outline-focus-ring transition duration-100 ease-linear hover:bg-primary_hover hover:text-fg-quaternary_hover focus-visible:outline-2 focus-visible:outline-offset-2 pressed:bg-primary_hover pressed:text-fg-quaternary_hover">
+                <AriaButton className="absolute top-2 right-2 flex cursor-pointer items-center justify-center rounded-sm p-1.5 text-fg-quaternary outline-focus-ring transition duration-100 ease-linear hover:bg-primary_hover hover:text-fg-quaternary_hover focus-visible:outline-2 focus-visible:outline-offset-2 pressed:bg-primary_hover pressed:text-fg-quaternary_hover">
                     <ChevronSelectorVertical className="size-4 shrink-0 stroke-[2.25px]" />
                 </AriaButton>
                 <AriaPopover

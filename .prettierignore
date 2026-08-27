@@ -1,1 +1,5 @@
 package.json
+
+# Generated lockfiles — not ours to format
+package-lock.json
+bun.lock

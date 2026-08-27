@@ -8,17 +8,17 @@ import { AppleLogo, DribbleLogo, FacebookLogo, FigmaLogo, FigmaLogoOutlined, Goo
 
 export const styles = sortCx({
     common: {
-        root: "group disabled:stroke-fg-disabled disabled:text-fg-disabled disabled:*:text-fg-disabled relative inline-flex h-max cursor-pointer items-center justify-center font-semibold whitespace-nowrap outline-focus-ring transition duration-100 ease-linear before:absolute focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed",
+        root: "group relative inline-flex h-max cursor-pointer items-center justify-center font-semibold whitespace-nowrap outline-focus-ring transition duration-100 ease-linear before:absolute focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:stroke-fg-disabled disabled:text-fg-disabled disabled:*:text-fg-disabled",
         icon: "pointer-events-none shrink-0 transition-inherit-all",
     },
 
     sizes: {
         md: {
-            root: "gap-2 rounded-lg px-3.5 py-2.5 text-sm before:rounded-[7px] data-icon-only:p-3",
+            root: "gap-2 rounded-md px-3.5 py-2.5 text-sm before:rounded-[7px] data-icon-only:p-3",
             icon: "size-4",
         },
         lg: {
-            root: "gap-2.5 rounded-lg px-4 py-2.5 text-md before:rounded-[7px] data-icon-only:p-3",
+            root: "gap-2.5 rounded-md px-4 py-2.5 text-md before:rounded-[7px] data-icon-only:p-3",
             icon: "size-5",
         },
     },

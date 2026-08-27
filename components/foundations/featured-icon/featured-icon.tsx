@@ -38,36 +38,36 @@ const styles = sortCx({
         },
         colors: {
             brand: "before:border-utility-brand-200 before:bg-utility-brand-50 after:bg-brand-solid",
-            gray: "before:border-utility-neutral-200 before:bg-utility-neutral-50 after:bg-secondary-solid",
-            error: "before:border-utility-red-200 before:bg-utility-red-50 after:bg-error-solid",
-            warning: "before:border-utility-yellow-200 before:bg-utility-yellow-50 after:bg-warning-solid",
-            success: "before:border-utility-green-200 before:bg-utility-green-50 after:bg-success-solid",
+            gray: "before:border-utility-gray-200 before:bg-utility-gray-50 after:bg-secondary-solid",
+            error: "before:border-utility-error-200 before:bg-utility-error-50 after:bg-error-solid",
+            warning: "before:border-utility-warning-200 before:bg-utility-warning-50 after:bg-warning-solid",
+            success: "before:border-utility-success-200 before:bg-utility-success-50 after:bg-success-solid",
         },
     },
 
     dark: {
         base: "text-fg-white shadow-xs-skeuomorphic before:absolute before:inset-px before:border before:border-white/12 before:mask-b-from-0%",
         sizes: {
-            sm: "size-8 rounded-md before:rounded-[5px]",
-            md: "size-10 rounded-lg before:rounded-[7px]",
-            lg: "size-12 rounded-[10px] before:rounded-[9px]",
+            sm: "size-8 rounded-sm before:rounded-[5px]",
+            md: "size-10 rounded-md before:rounded-[7px]",
+            lg: "size-12 rounded-lg before:rounded-[9px]",
             xl: "size-14 rounded-xl before:rounded-[11px]",
         },
         colors: {
             brand: "bg-brand-solid before:border-utility-brand-200/12",
-            gray: "bg-secondary-solid before:border-utility-neutral-200/12",
-            error: "bg-error-solid before:border-utility-red-200/12",
-            warning: "bg-warning-solid before:border-utility-yellow-200/12",
-            success: "bg-success-solid before:border-utility-green-200/12",
+            gray: "bg-secondary-solid before:border-utility-gray-200/12",
+            error: "bg-error-solid before:border-utility-error-200/12",
+            warning: "bg-warning-solid before:border-utility-warning-200/12",
+            success: "bg-success-solid before:border-utility-success-200/12",
         },
     },
 
     modern: {
         base: "bg-primary shadow-xs-skeuomorphic ring-1 ring-primary ring-inset",
         sizes: {
-            sm: "size-8 rounded-md",
-            md: "size-10 rounded-lg",
-            lg: "size-12 rounded-[10px]",
+            sm: "size-8 rounded-sm",
+            md: "size-10 rounded-md",
+            lg: "size-12 rounded-lg",
             xl: "size-14 rounded-xl",
         },
         colors: {
@@ -86,9 +86,9 @@ const styles = sortCx({
         ].join(" "),
         sizes: {
             sm: "size-8 rounded-[8px] before:rounded-[4px]",
-            md: "size-10 rounded-[10px] before:rounded-[6px]",
+            md: "size-10 rounded-lg before:rounded-[6px]",
             lg: "size-12 rounded-[12px] before:rounded-[8px]",
-            xl: "size-14 rounded-[14px] before:rounded-[10px]",
+            xl: "size-14 rounded-[14px] before:rounded-lg",
         },
         colors: {
             brand: "",

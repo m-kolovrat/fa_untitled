@@ -105,7 +105,7 @@ export const ChartTooltipContent = ({ active, payload, label, isRadialChart, isP
     secondaryTitle = isSingleDataPoint && labelFormatter ? labelFormatter(secondaryTitle, payload) : secondaryTitle;
 
     return (
-        <div className="flex flex-col gap-0.5 rounded-lg bg-primary-solid px-3 py-2 shadow-lg">
+        <div className="flex flex-col gap-0.5 rounded-md bg-primary-solid px-3 py-2 shadow-lg">
             <p className="text-xs font-semibold text-white">{title}</p>
 
             {!secondaryTitle ? null : Array.isArray(secondaryTitle) ? (

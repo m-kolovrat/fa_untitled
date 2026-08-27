@@ -136,7 +136,7 @@ export function Draggable({ name, type, size, fileIconType, theme }: DraggablePr
             className="group/drag z-10 flex flex-col items-center gap-1 self-start p-2 outline-hidden"
             tabIndex={0}
         >
-            <div className="rounded-md p-1.5 group-focus/drag:bg-tertiary group-focus/drag:ring-[0.5px] group-focus/drag:ring-black/5 group-focus/drag:ring-inset">
+            <div className="rounded-sm p-1.5 group-focus/drag:bg-tertiary group-focus/drag:ring-[0.5px] group-focus/drag:ring-black/5 group-focus/drag:ring-inset">
                 <FileIcon type={fileIconType || type} variant={theme} className="pointer-events-none size-10" />
             </div>
             <p className="line-clamp-2 block max-w-50 rounded text-center text-sm font-medium text-ellipsis text-primary">

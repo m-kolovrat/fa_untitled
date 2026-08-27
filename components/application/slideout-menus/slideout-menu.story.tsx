@@ -1,7 +1,7 @@
 import type { FC } from "react";
+import { SlideoutMenu } from "@/components/application/slideout-menus/slideout-menu";
 import { Button } from "@/components/base/buttons/button";
 import { Input } from "@/components/base/input/input";
-import { SlideoutMenu } from "@/components/application/slideout-menus/slideout-menu";
 
 export default {
     title: "Application/Slideout menu",

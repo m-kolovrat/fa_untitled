@@ -32,19 +32,13 @@ export const Default = () => {
                 <Button type="submit">Submit</Button>
             </Form>
 
-            {submitted && (
-                <pre className="rounded-lg bg-secondary p-3 font-mono text-xs text-tertiary">{JSON.stringify(submitted, null, 2)}</pre>
-            )}
+            {submitted && <pre className="rounded-md bg-secondary p-3 font-mono text-xs text-tertiary">{JSON.stringify(submitted, null, 2)}</pre>}
         </div>
     );
 };
 
 export const ValidationOnSubmit = () => (
-    <Form
-        onSubmit={(e) => e.preventDefault()}
-        validationBehavior="native"
-        className="flex w-full max-w-sm flex-col gap-4"
-    >
+    <Form onSubmit={(e) => e.preventDefault()} validationBehavior="native" className="flex w-full max-w-sm flex-col gap-4">
         <Input isRequired name="email" type="email" label="Email" hint="Try submitting empty to see native validation." placeholder="you@company.com" />
         <Button type="submit">Continue</Button>
     </Form>
