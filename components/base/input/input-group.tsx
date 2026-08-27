@@ -20,8 +20,8 @@ export const InputPrefix = ({ children, ...props }: InputPrefixProps) => (
         className={cx(
             "flex text-tertiary shadow-xs ring-1 ring-border-primary ring-inset",
             // Styles when the prefix is within an `InputGroup`
-            "in-data-input-wrapper:in-data-leading:-mr-px in-data-input-wrapper:in-data-leading:rounded-l-lg",
-            "in-data-input-wrapper:in-data-trailing:-ml-px in-data-input-wrapper:in-data-trailing:rounded-r-lg",
+            "in-data-input-wrapper:in-data-leading:-mr-px in-data-input-wrapper:in-data-leading:rounded-l-md",
+            "in-data-input-wrapper:in-data-trailing:-ml-px in-data-input-wrapper:in-data-trailing:rounded-r-md",
             // Default size styles
             "px-3 py-2 text-md",
             // Small size styles
@@ -111,7 +111,7 @@ export const InputGroup = ({ size = "md", prefix, leadingAddon, trailingAddon, l
                         // Used to apply styles based on the size of the input group within children
                         data-input-size={size}
                         className={cx(
-                            "group relative flex h-max w-full flex-row justify-center rounded-lg bg-primary transition-all duration-100 ease-linear",
+                            "group relative flex h-max w-full flex-row justify-center rounded-md bg-primary transition-all duration-100 ease-linear",
 
                             // Only apply focus ring when child is select and input is focused
                             "has-[&>select]:shadow-xs has-[&>select]:ring-1 has-[&>select]:ring-border-primary has-[&>select]:ring-inset has-[&>select]:has-[input:focus]:ring-2 has-[&>select]:has-[input:focus]:ring-border-brand",

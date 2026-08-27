@@ -48,9 +48,9 @@ const styles = sortCx({
     dark: {
         base: "text-fg-white shadow-xs-skeuomorphic before:absolute before:inset-px before:border before:border-white/12 before:mask-b-from-0%",
         sizes: {
-            sm: "size-8 rounded-md before:rounded-[5px]",
-            md: "size-10 rounded-lg before:rounded-[7px]",
-            lg: "size-12 rounded-[10px] before:rounded-[9px]",
+            sm: "size-8 rounded-sm before:rounded-[5px]",
+            md: "size-10 rounded-md before:rounded-[7px]",
+            lg: "size-12 rounded-lg before:rounded-[9px]",
             xl: "size-14 rounded-xl before:rounded-[11px]",
         },
         colors: {
@@ -65,9 +65,9 @@ const styles = sortCx({
     modern: {
         base: "bg-primary shadow-xs-skeuomorphic ring-1 ring-primary ring-inset",
         sizes: {
-            sm: "size-8 rounded-md",
-            md: "size-10 rounded-lg",
-            lg: "size-12 rounded-[10px]",
+            sm: "size-8 rounded-sm",
+            md: "size-10 rounded-md",
+            lg: "size-12 rounded-lg",
             xl: "size-14 rounded-xl",
         },
         colors: {
@@ -86,9 +86,9 @@ const styles = sortCx({
         ].join(" "),
         sizes: {
             sm: "size-8 rounded-[8px] before:rounded-[4px]",
-            md: "size-10 rounded-[10px] before:rounded-[6px]",
+            md: "size-10 rounded-lg before:rounded-[6px]",
             lg: "size-12 rounded-[12px] before:rounded-[8px]",
-            xl: "size-14 rounded-[14px] before:rounded-[10px]",
+            xl: "size-14 rounded-[14px] before:rounded-lg",
         },
         colors: {
             brand: "",

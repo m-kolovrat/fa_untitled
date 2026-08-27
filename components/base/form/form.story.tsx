@@ -33,7 +33,7 @@ export const Default = () => {
             </Form>
 
             {submitted && (
-                <pre className="rounded-lg bg-secondary p-3 font-mono text-xs text-tertiary">{JSON.stringify(submitted, null, 2)}</pre>
+                <pre className="rounded-md bg-secondary p-3 font-mono text-xs text-tertiary">{JSON.stringify(submitted, null, 2)}</pre>
             )}
         </div>
     );

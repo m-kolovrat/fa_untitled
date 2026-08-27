@@ -192,9 +192,9 @@ interface AvatarRowProps extends ComponentPropsWithRef<"div"> {
 
 /** Avatar sizes per root size — ordered smallest to largest (left edge → center). */
 const rowStyles = {
-    sm: ["size-8 rounded-md", "size-9 rounded-[7px]", "size-10 rounded-lg", "size-11 rounded-[9px]"],
-    md: ["size-10 rounded-lg", "size-11 rounded-[9px]", "size-12 rounded-[10px]"],
-    lg: ["size-10 rounded-lg", "size-11 rounded-[9px]", "size-12 rounded-[10px]"],
+    sm: ["size-8 rounded-sm", "size-9 rounded-[7px]", "size-10 rounded-md", "size-11 rounded-[9px]"],
+    md: ["size-10 rounded-md", "size-11 rounded-[9px]", "size-12 rounded-lg"],
+    lg: ["size-10 rounded-md", "size-11 rounded-[9px]", "size-12 rounded-lg"],
 } as const;
 
 const AvatarRow = ({ avatars = [], children, ...props }: AvatarRowProps) => {
@@ -246,9 +246,9 @@ interface AvatarGridProps extends ComponentPropsWithRef<"div"> {
 }
 
 const gridStyles = {
-    sm: { avatar: "size-8 rounded-md", inner: "rounded-[5px]", gap: "gap-2 pl-2", rowGap: "gap-2" },
-    md: { avatar: "size-10 rounded-lg", inner: "rounded-[7px]", gap: "gap-3 pl-3", rowGap: "gap-3" },
-    lg: { avatar: "size-12 rounded-[10px]", inner: "rounded-[9px]", gap: "gap-3 pl-3", rowGap: "gap-3" },
+    sm: { avatar: "size-8 rounded-sm", inner: "rounded-[5px]", gap: "gap-2 pl-2", rowGap: "gap-2" },
+    md: { avatar: "size-10 rounded-md", inner: "rounded-[7px]", gap: "gap-3 pl-3", rowGap: "gap-3" },
+    lg: { avatar: "size-12 rounded-lg", inner: "rounded-[9px]", gap: "gap-3 pl-3", rowGap: "gap-3" },
 } as const;
 
 const AvatarGrid = ({ avatars = [], ...props }: AvatarGridProps) => {

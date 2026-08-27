@@ -14,11 +14,11 @@ export const styles = sortCx({
 
     sizes: {
         md: {
-            root: "gap-2 rounded-lg px-3.5 py-2.5 text-sm before:rounded-[7px] data-icon-only:p-3",
+            root: "gap-2 rounded-md px-3.5 py-2.5 text-sm before:rounded-[7px] data-icon-only:p-3",
             icon: "size-4",
         },
         lg: {
-            root: "gap-2.5 rounded-lg px-4 py-2.5 text-md before:rounded-[7px] data-icon-only:p-3",
+            root: "gap-2.5 rounded-md px-4 py-2.5 text-md before:rounded-[7px] data-icon-only:p-3",
             icon: "size-5",
         },
     },

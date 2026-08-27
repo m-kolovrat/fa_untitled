@@ -35,13 +35,13 @@ export const DropdownAccountBreadcrumb = () => {
             <AriaButton
                 className={({ isPressed, isFocusVisible }) =>
                     cx(
-                        "flex cursor-pointer items-center gap-1.5 rounded-lg outline-0 outline-offset-2 outline-focus-ring",
+                        "flex cursor-pointer items-center gap-1.5 rounded-md outline-0 outline-offset-2 outline-focus-ring",
                         (isPressed || isFocusVisible) && "outline-2",
                     )
                 }
             >
-                <div className="flex rounded-lg bg-primary p-0.5 ring-[0.5px] ring-secondary ring-inset">
-                    <Avatar size="xs" src={selectedAccount?.avatar} className="shadow-md" contentClassName="rounded-md before:hidden" />
+                <div className="flex rounded-md bg-primary p-0.5 ring-[0.5px] ring-secondary ring-inset">
+                    <Avatar size="xs" src={selectedAccount?.avatar} className="shadow-md" contentClassName="rounded-sm before:hidden" />
                 </div>
                 <span className="text-sm font-semibold text-primary">{selectedAccount?.name}</span>
 
@@ -63,7 +63,7 @@ export const DropdownAccountBreadcrumb = () => {
                             textValue={account.name}
                             className={(state) =>
                                 cx(
-                                    "relative w-full cursor-pointer rounded-md px-2 py-2 text-left outline-focus-ring transition duration-100 ease-linear hover:bg-primary_hover focus:z-10 focus-visible:outline-2 focus-visible:outline-offset-2",
+                                    "relative w-full cursor-pointer rounded-sm px-2 py-2 text-left outline-focus-ring transition duration-100 ease-linear hover:bg-primary_hover focus:z-10 focus-visible:outline-2 focus-visible:outline-offset-2",
                                     state.isSelected && "bg-primary_hover",
                                 )
                             }
@@ -71,8 +71,8 @@ export const DropdownAccountBreadcrumb = () => {
                             {({ isSelected }) => (
                                 <>
                                     <figure className="group flex min-w-0 flex-1 items-center gap-1.5">
-                                        <div className="flex rounded-[10px] bg-primary p-0.5 ring-[0.5px] ring-secondary ring-inset">
-                                            <Avatar size="sm" src={account.avatar} className="shadow-md" contentClassName="rounded-lg before:hidden" />
+                                        <div className="flex rounded-lg bg-primary p-0.5 ring-[0.5px] ring-secondary ring-inset">
+                                            <Avatar size="sm" src={account.avatar} className="shadow-md" contentClassName="rounded-md before:hidden" />
                                         </div>
                                         <figcaption className="min-w-0 flex-1">
                                             <p className="text-sm font-semibold text-primary">{account.name}</p>

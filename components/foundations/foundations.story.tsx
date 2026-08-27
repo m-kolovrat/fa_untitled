@@ -59,7 +59,7 @@ const Section = ({ title, hint, children }: { title: string; hint?: string; chil
 
 const Swatch = ({ name, value }: { name: string; value: string }) => (
     <div className="flex flex-col gap-1.5">
-        <div className="h-16 w-full rounded-lg ring-1 ring-black/10 ring-inset" style={{ background: `var(${name})` }} />
+        <div className="h-16 w-full rounded-md ring-1 ring-black/10 ring-inset" style={{ background: `var(${name})` }} />
         <span className="text-xs font-medium text-secondary">{name.replace("--color-", "")}</span>
         <span className="font-mono text-[11px] text-quaternary">{value}</span>
     </div>

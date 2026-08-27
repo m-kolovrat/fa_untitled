@@ -66,11 +66,11 @@ const withPillTypes = {
         styles: filledColors,
     },
     [badgeTypes.badgeColor]: {
-        common: "size-max flex items-center whitespace-nowrap rounded-md ring-1 ring-inset",
+        common: "size-max flex items-center whitespace-nowrap rounded-sm ring-1 ring-inset",
         styles: filledColors,
     },
     [badgeTypes.badgeModern]: {
-        common: "size-max flex items-center whitespace-nowrap rounded-md ring-1 ring-inset shadow-xs",
+        common: "size-max flex items-center whitespace-nowrap rounded-sm ring-1 ring-inset shadow-xs",
         styles: {
             gray: {
                 root: "bg-primary text-secondary ring-primary",
@@ -87,11 +87,11 @@ const withBadgeTypes = {
         styles: filledColors,
     },
     [badgeTypes.badgeColor]: {
-        common: "size-max flex items-center whitespace-nowrap rounded-md ring-1 ring-inset",
+        common: "size-max flex items-center whitespace-nowrap rounded-sm ring-1 ring-inset",
         styles: filledColors,
     },
     [badgeTypes.badgeModern]: {
-        common: "size-max flex items-center whitespace-nowrap rounded-md ring-1 ring-inset bg-primary text-secondary ring-primary shadow-xs",
+        common: "size-max flex items-center whitespace-nowrap rounded-sm ring-1 ring-inset bg-primary text-secondary ring-primary shadow-xs",
         styles: addonOnlyColors,
     },
 };
@@ -118,7 +118,7 @@ export const Badge = <T extends BadgeTypes>(props: BadgeProps<T>) => {
     const badgeSizes = {
         sm: "py-0.5 px-1.5 text-xs font-medium",
         md: "py-0.5 px-2 text-sm font-medium",
-        lg: "py-1 px-2.5 text-sm font-medium rounded-lg",
+        lg: "py-1 px-2.5 text-sm font-medium rounded-md",
     };
 
     const sizes = {
@@ -152,7 +152,7 @@ export const BadgeWithDot = <T extends BadgeTypes>(props: BadgeWithDotProps<T>) 
     const badgeSizes = {
         sm: "gap-1 py-0.5 px-1.5 text-xs font-medium",
         md: "gap-1.5 py-0.5 px-2 text-sm font-medium",
-        lg: "gap-1.5 py-1 px-2.5 text-sm font-medium rounded-lg",
+        lg: "gap-1.5 py-1 px-2.5 text-sm font-medium rounded-md",
     };
 
     const sizes = {
@@ -210,8 +210,8 @@ export const BadgeWithIcon = <T extends BadgeTypes>(props: BadgeWithIconProps<T>
             leading: "gap-1 py-0.5 pr-2 pl-1.5 text-sm font-medium",
         },
         lg: {
-            trailing: "gap-1 py-1 pl-2.5 pr-2 text-sm font-medium rounded-lg",
-            leading: "gap-1 py-1 pr-2.5 pl-2 text-sm font-medium rounded-lg",
+            trailing: "gap-1 py-1 pl-2.5 pr-2 text-sm font-medium rounded-md",
+            leading: "gap-1 py-1 pr-2.5 pl-2 text-sm font-medium rounded-md",
         },
     };
 
@@ -251,7 +251,7 @@ export const BadgeWithFlag = <T extends BadgeTypes>(props: BadgeWithFlagProps<T>
     const badgeSizes = {
         sm: "gap-1 py-0.5 pl-1 pr-1.5 text-xs font-medium",
         md: "gap-1.5 py-0.5 pl-1.5 pr-2 text-sm font-medium",
-        lg: "gap-1.5 py-1 pl-2 pr-2.5 text-sm font-medium rounded-lg",
+        lg: "gap-1.5 py-1 pl-2 pr-2.5 text-sm font-medium rounded-md",
     };
 
     const sizes = {
@@ -289,7 +289,7 @@ export const BadgeWithImage = <T extends BadgeTypes>(props: BadgeWithImageProps<
     const badgeSizes = {
         sm: "gap-1 py-0.5 pl-1 pr-1.5 text-xs font-medium",
         md: "gap-1.5 py-0.5 pl-1.5 pr-2 text-sm font-medium",
-        lg: "gap-1.5 py-1 pl-2 pr-2.5 text-sm font-medium rounded-lg",
+        lg: "gap-1.5 py-1 pl-2 pr-2.5 text-sm font-medium rounded-md",
     };
 
     const sizes = {
@@ -335,7 +335,7 @@ export const BadgeWithButton = <T extends BadgeTypes>(props: BadgeWithButtonProp
     const badgeSizes = {
         sm: "gap-0.5 py-0.5 pl-1.5 pr-0.75 text-xs font-medium",
         md: "gap-0.5 py-0.5 pl-2 pr-1 text-sm font-medium",
-        lg: "gap-0.5 py-1 pl-2.5 pr-1.5 text-sm font-medium rounded-lg",
+        lg: "gap-0.5 py-1 pl-2.5 pr-1.5 text-sm font-medium rounded-md",
     };
 
     const sizes = {
@@ -385,7 +385,7 @@ export const BadgeIcon = <T extends BadgeTypes>(props: BadgeIconProps<T>) => {
     const badgeSizes = {
         sm: "p-1.25",
         md: "p-1.5",
-        lg: "p-2 rounded-lg",
+        lg: "p-2 rounded-md",
     };
 
     const sizes = {

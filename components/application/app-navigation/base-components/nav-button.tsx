@@ -37,7 +37,7 @@ export const NavButton = ({ current, label, href, icon: Icon, className, tooltip
                     aria-label={label}
                     onClick={onClick}
                     className={cx(
-                        "group/item relative flex w-full cursor-pointer items-center justify-center gap-1 rounded-md bg-primary outline-focus-ring transition duration-100 ease-linear select-none hover:bg-primary_hover focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-2",
+                        "group/item relative flex w-full cursor-pointer items-center justify-center gap-1 rounded-sm bg-primary outline-focus-ring transition duration-100 ease-linear select-none hover:bg-primary_hover focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-2",
                         current && "bg-secondary hover:bg-secondary_hover",
                         iconOnly ? "size-9" : "px-2 py-1.5",
                         className,

@@ -18,7 +18,7 @@ export const CheckboxBase = ({ className, isSelected, isDisabled, isIndeterminat
         <div
             className={cx(
                 "relative flex size-4 shrink-0 cursor-pointer appearance-none items-center justify-center rounded bg-primary ring-1 ring-primary ring-inset",
-                size === "md" && "size-5 rounded-md",
+                size === "md" && "size-5 rounded-sm",
                 (isSelected || isIndeterminate) && "bg-brand-solid ring-brand-solid",
                 isDisabled && "cursor-not-allowed opacity-50",
                 isDisabled && !(isSelected || isIndeterminate) && "bg-tertiary",
