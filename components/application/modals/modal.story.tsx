@@ -1,8 +1,8 @@
 import type { FC } from "react";
 import { Trash01 } from "@untitledui/icons";
+import { Dialog, DialogTrigger, Modal, ModalOverlay } from "@/components/application/modals/modal";
 import { Button } from "@/components/base/buttons/button";
 import { FeaturedIcon } from "@/components/foundations/featured-icon/featured-icon";
-import { Dialog, DialogTrigger, Modal, ModalOverlay } from "@/components/application/modals/modal";
 
 export default {
     title: "Application/Modal",

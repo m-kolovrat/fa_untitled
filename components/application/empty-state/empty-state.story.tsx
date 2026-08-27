@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import { Plus, SearchLg, UploadCloud02 } from "@untitledui/icons";
-import { Button } from "@/components/base/buttons/button";
 import { EmptyState } from "@/components/application/empty-state/empty-state";
+import { Button } from "@/components/base/buttons/button";
 
 export default {
     title: "Application/Empty state",

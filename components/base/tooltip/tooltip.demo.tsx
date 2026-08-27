@@ -1,10 +1,10 @@
 "use client";
 
-import type { Placement } from "@react-types/overlays";
 import { HelpCircle } from "@untitledui/icons";
+import type { Placement as AriaPlacement } from "react-aria-components";
 import { Tooltip, TooltipTrigger } from "@/components/base/tooltip/tooltip";
 
-const PLACEMENTS: { label: string; value: Placement }[] = [
+const PLACEMENTS: { label: string; value: AriaPlacement }[] = [
     {
         label: "Top left",
         value: "top left",
