@@ -53,7 +53,7 @@ export const styles = sortCx({
             root: [
                 "bg-brand-solid text-white hover:bg-brand-solid_hover data-loading:bg-brand-solid_hover disabled:bg-disabled",
                 // Icon styles
-                "*:data-icon:text-white hover:*:data-icon:text-white",
+                "*:data-icon:text-button-primary-icon hover:*:data-icon:text-button-primary-icon_hover",
             ].join(" "),
         },
         secondary: {
@@ -92,7 +92,7 @@ export const styles = sortCx({
             root: [
                 "bg-error-solid text-white outline-error hover:bg-error-solid_hover data-loading:bg-error-solid_hover disabled:bg-disabled",
                 // Icon styles
-                "*:data-icon:text-white hover:*:data-icon:text-white",
+                "*:data-icon:text-button-destructive-primary-icon hover:*:data-icon:text-button-destructive-primary-icon_hover",
             ].join(" "),
         },
         "secondary-destructive": {

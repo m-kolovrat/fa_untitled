@@ -7,7 +7,7 @@ import { Badge, BadgeWithButton, BadgeWithDot, BadgeWithFlag, BadgeWithIcon, Bad
  * Canonical interactive story for the Badge.
  *
  * `Playground` drives the base `Badge` from the Controls panel. The curated
- * rows below are hand-picked references: `Colors` (all 12), `Types` (the 3
+ * rows below are hand-picked references: `Colors` (all 9), `Types` (the 3
  * shapes), and `Variants` (the sibling badge components — dot, icon, flag,
  * image, close button).
  *
@@ -17,7 +17,7 @@ import { Badge, BadgeWithButton, BadgeWithDot, BadgeWithFlag, BadgeWithIcon, Bad
 
 const sizes = ["sm", "md", "lg"] as const;
 const types = ["pill-color", "color", "modern"] as const;
-const colors = ["gray", "brand", "error", "warning", "success", "slate", "sky", "blue", "indigo", "purple", "pink", "orange"] as const;
+const colors = ["gray", "brand", "error", "warning", "success", "blue-light", "purple", "pink", "orange-dark"] as const;
 
 const IMG_SRC = "https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80";
 
@@ -55,7 +55,7 @@ type Story = StoryObj<typeof meta>;
 /** Single interactive badge — edit props live in the Controls panel. */
 export const Playground: Story = {};
 
-/** The badge in all 12 colors (pill-color type). */
+/** The badge in all 9 colors (pill-color type). */
 export const Colors: Story = {
     render: (args) => (
         <div className="flex flex-wrap items-start gap-3">

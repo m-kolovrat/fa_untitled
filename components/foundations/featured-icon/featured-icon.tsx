@@ -38,10 +38,10 @@ const styles = sortCx({
         },
         colors: {
             brand: "before:border-utility-brand-200 before:bg-utility-brand-50 after:bg-brand-solid",
-            gray: "before:border-utility-neutral-200 before:bg-utility-neutral-50 after:bg-secondary-solid",
-            error: "before:border-utility-red-200 before:bg-utility-red-50 after:bg-error-solid",
-            warning: "before:border-utility-yellow-200 before:bg-utility-yellow-50 after:bg-warning-solid",
-            success: "before:border-utility-green-200 before:bg-utility-green-50 after:bg-success-solid",
+            gray: "before:border-utility-gray-200 before:bg-utility-gray-50 after:bg-secondary-solid",
+            error: "before:border-utility-error-200 before:bg-utility-error-50 after:bg-error-solid",
+            warning: "before:border-utility-warning-200 before:bg-utility-warning-50 after:bg-warning-solid",
+            success: "before:border-utility-success-200 before:bg-utility-success-50 after:bg-success-solid",
         },
     },
 
@@ -55,10 +55,10 @@ const styles = sortCx({
         },
         colors: {
             brand: "bg-brand-solid before:border-utility-brand-200/12",
-            gray: "bg-secondary-solid before:border-utility-neutral-200/12",
-            error: "bg-error-solid before:border-utility-red-200/12",
-            warning: "bg-warning-solid before:border-utility-yellow-200/12",
-            success: "bg-success-solid before:border-utility-green-200/12",
+            gray: "bg-secondary-solid before:border-utility-gray-200/12",
+            error: "bg-error-solid before:border-utility-error-200/12",
+            warning: "bg-warning-solid before:border-utility-warning-200/12",
+            success: "bg-success-solid before:border-utility-success-200/12",
         },
     },
 

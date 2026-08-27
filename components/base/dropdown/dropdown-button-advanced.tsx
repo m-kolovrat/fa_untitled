@@ -22,7 +22,7 @@ import { cx } from "@/utils/cx";
 
 const StatusDot = ({ status }: { status: "online" | "offline" }) => (
     <span className="mr-2 inline-flex shrink-0 items-center justify-center p-[5px]">
-        <span className={cx("inline-block size-1.5 rounded-full", status === "online" ? "bg-fg-success-secondary" : "bg-utility-neutral-300")} />
+        <span className={cx("inline-block size-1.5 rounded-full", status === "online" ? "bg-fg-success-secondary" : "bg-utility-gray-300")} />
     </span>
 );
 
