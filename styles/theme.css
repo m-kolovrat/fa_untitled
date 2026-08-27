@@ -396,7 +396,7 @@
     /* BORDER COLORS */
     --color-border-primary: var(--color-gray-300);
     --color-border-secondary: var(--color-gray-200);
-    --color-border-secondary_alt: rgb(0 0 0 / 0.1);
+    --color-border-secondary_alt: rgb(0 0 0 / 0.08); /* synced to Figma border-secondary_alt (was 0.1) */
     --color-border-tertiary: var(--color-gray-100);
     --color-border-error: var(--color-error-500);
     --color-border-error_subtle: var(--color-error-300);

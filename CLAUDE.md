@@ -735,6 +735,8 @@ Use text color variables to manage all text fill colors in your designs across l
 | text-quaternary_on-brand   | Quaternary text when used on solid brand color backgrounds. Commonly used for brand theme website sections (e.g. footers).                                           |
 | text-white                 | Text that is always white, regardless of the mode.                                                                                                                   |
 | text-placeholder           | Default color for placeholder text such as input field placeholders. This can be changed to gray-400, but gray-500 is more accessible because it is higher contrast. |
+| text-placeholder_subtle    | A lower-contrast alternative to text-placeholder for placeholder text that should recede further, such as a secondary field in a multi-part input.                   |
+| text-disabled              | Default text color for disabled form elements and controls.                                                                                                          |
 | text-brand-primary         | Primary brand text useful for headings (e.g. cards in pricing page headers).                                                                                         |
 | text-brand-secondary       | Secondary brand text for brand buttons, as well as accented text, highlights, and subheadings (e.g. subheadings in blog post cards).                                 |
 | text-brand-secondary_hover | Secondary brand text when in hover state (e.g. brand buttons).                                                                                                       |
