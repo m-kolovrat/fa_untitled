@@ -49,6 +49,7 @@ export const ProgressBarBase = ({ value, min = 0, max = 100, className, progress
             <div
                 // Use transform instead of width to avoid layout thrashing (and for smoother animation)
                 style={{ transform: `translateX(-${100 - percentage}%)` }}
+                // Off-scale on purpose: progress tracks data, not interaction — instant would advance it in visible jumps.
                 className={cx("size-full rounded-sm bg-fg-brand-primary transition duration-75 ease-linear", progressClassName)}
             />
         </div>

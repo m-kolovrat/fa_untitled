@@ -45,14 +45,11 @@ export const SidebarNavigationSlim = ({ activeUrl, items, footerItems = [], hide
             style={{
                 width: MAIN_SIDEBAR_WIDTH,
             }}
-            className={cx(
-                "group flex h-full max-h-full max-w-full overflow-y-auto py-1 pl-1 transition duration-100 ease-linear",
-                isSecondarySidebarVisible && "bg-primary",
-            )}
+            className={cx("group flex h-full max-h-full max-w-full overflow-y-auto py-1 pl-1 transition", isSecondarySidebarVisible && "bg-primary")}
         >
             <div
                 className={cx(
-                    "flex w-auto flex-col justify-between rounded-xl bg-primary pt-5 ring-1 ring-secondary transition duration-300 ring-inset",
+                    "flex w-auto flex-col justify-between rounded-xl bg-primary pt-5 ring-1 ring-secondary transition duration-slower ring-inset",
                     hideBorder && !isSecondarySidebarVisible && "ring-transparent",
                 )}
             >

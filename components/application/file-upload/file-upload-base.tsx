@@ -201,7 +201,7 @@ export const FileUploadDropZone = ({
             onDragEnd={handleDragOut}
             onDrop={handleDrop}
             className={cx(
-                "relative flex flex-col items-center gap-3 rounded-xl bg-primary px-6 py-4 text-tertiary ring-1 ring-secondary transition duration-100 ease-linear ring-inset",
+                "relative flex flex-col items-center gap-3 rounded-xl bg-primary px-6 py-4 text-tertiary ring-1 ring-secondary transition ring-inset",
                 isDraggingOver && "ring-2 ring-brand",
                 isDisabled && "cursor-not-allowed bg-secondary",
                 className,
@@ -228,9 +228,7 @@ export const FileUploadDropZone = ({
                     </label>
                     <span className="text-sm max-md:hidden">or drag and drop</span>
                 </div>
-                <p className={cx("text-xs transition duration-100 ease-linear", isInvalid && "text-error-primary")}>
-                    {hint || "SVG, PNG, JPG or GIF (max. 800x400px)"}
-                </p>
+                <p className={cx("text-xs transition", isInvalid && "text-error-primary")}>{hint || "SVG, PNG, JPG or GIF (max. 800x400px)"}</p>
             </div>
         </div>
     );
@@ -264,7 +262,7 @@ export const FileListItemProgressBar = ({ name, size, progress, failed, type, fi
         <motion.li
             layout="position"
             className={cx(
-                "relative flex gap-3 rounded-xl bg-primary p-4 ring-1 ring-secondary transition-shadow duration-100 ease-linear ring-inset",
+                "relative flex gap-3 rounded-xl bg-primary p-4 ring-1 ring-secondary transition-shadow ring-inset",
                 failed && "ring-2 ring-error",
                 className,
             )}
@@ -322,6 +320,7 @@ export const FileListItemProgressFill = ({ name, size, progress, failed, type, f
             {/* Progress fill. */}
             <div
                 style={{ transform: `translateX(-${100 - progress}%)` }}
+                // Off-scale on purpose: progress tracks data, not interaction — instant would advance it in visible jumps.
                 className={cx("absolute inset-0 size-full bg-secondary transition duration-75 ease-linear", isComplete && "opacity-0")}
                 role="progressbar"
                 aria-valuenow={progress}
@@ -329,12 +328,7 @@ export const FileListItemProgressFill = ({ name, size, progress, failed, type, f
                 aria-valuemax={100}
             />
             {/* Inner ring. */}
-            <div
-                className={cx(
-                    "absolute inset-0 size-full rounded-[inherit] ring-1 ring-secondary transition duration-100 ease-linear ring-inset",
-                    failed && "ring-2 ring-error",
-                )}
-            />
+            <div className={cx("absolute inset-0 size-full rounded-[inherit] ring-1 ring-secondary transition ring-inset", failed && "ring-2 ring-error")} />
             <FileTypeIcon className="relative size-10 shrink-0 dark:hidden" type={type ?? "empty"} theme="light" variant={fileIconVariant ?? "solid"} />
             <FileTypeIcon className="relative size-10 shrink-0 not-dark:hidden" type={type ?? "empty"} theme="dark" variant={fileIconVariant ?? "solid"} />
 

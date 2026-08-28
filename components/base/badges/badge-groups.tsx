@@ -130,13 +130,7 @@ export const BadgeGroup = ({
     const colors = colorClasses[theme][color];
     const sizes = getSizeClasses(theme, !!children, !!IconTrailing)[align][size];
 
-    const rootClasses = cx(
-        "inline-flex w-max cursor-pointer items-center transition duration-100 ease-linear",
-        baseClasses[theme].root,
-        sizes.root,
-        colors.root,
-        className,
-    );
+    const rootClasses = cx("inline-flex w-max cursor-pointer items-center transition", baseClasses[theme].root, sizes.root, colors.root, className);
     const addonClasses = cx("inline-flex items-center", baseClasses[theme].addon, sizes.addon, colors.addon);
     const dotClasses = cx("inline-block size-2 shrink-0 rounded-full", sizes.dot, colors.dot);
     const iconClasses = cx(baseClasses[theme].icon, sizes.icon, colors.icon);

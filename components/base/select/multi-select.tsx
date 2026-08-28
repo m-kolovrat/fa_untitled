@@ -215,7 +215,7 @@ const MultiSelectRoot = ({
                         onClick={onResize}
                         className={(state) =>
                             cx(
-                                "relative flex w-full cursor-pointer items-center rounded-md bg-primary shadow-xs ring-1 ring-primary outline-hidden transition duration-100 ease-linear ring-inset",
+                                "relative flex w-full cursor-pointer items-center rounded-md bg-primary shadow-xs ring-1 ring-primary outline-hidden transition ring-inset",
                                 (state.isFocusVisible || state.isPressed) && "ring-2 ring-brand",
                                 state.isDisabled && "cursor-not-allowed opacity-50",
                             )

@@ -246,7 +246,7 @@ export const InputTags = ({
                 isInvalid={isInvalid}
                 className={({ isFocusWithin, isDisabled, isInvalid }) =>
                     cx(
-                        "group/input relative flex w-full items-center rounded-md bg-primary shadow-xs ring-1 ring-primary outline-hidden transition duration-100 ease-linear ring-inset",
+                        "group/input relative flex w-full items-center rounded-md bg-primary shadow-xs ring-1 ring-primary outline-hidden transition ring-inset",
                         isDisabled && "cursor-not-allowed opacity-50",
                         isFocusWithin && !isDisabled && "ring-2 ring-brand",
                         isInvalid && !isFocusWithin && "ring-error_subtle",
@@ -294,7 +294,7 @@ export const InputTags = ({
                             <Tooltip title={tooltip} placement="top">
                                 <TooltipTrigger
                                     className={cx(
-                                        "absolute cursor-pointer text-fg-quaternary transition duration-100 ease-linear group-invalid/input:hidden hover:text-fg-quaternary_hover focus:text-fg-quaternary_hover",
+                                        "absolute cursor-pointer text-fg-quaternary transition group-invalid/input:hidden hover:text-fg-quaternary_hover focus:text-fg-quaternary_hover",
                                         sizes[size].iconTrailing,
                                     )}
                                 >

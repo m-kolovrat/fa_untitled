@@ -57,7 +57,7 @@ export const SidebarNavigationDualTier = ({
                     } as React.CSSProperties
                 }
                 className={cx(
-                    "relative flex w-full flex-col border-r border-secondary pt-4 transition duration-300 lg:w-(--width) lg:pt-5",
+                    "relative flex w-full flex-col border-r border-secondary pt-4 transition duration-slower lg:w-(--width) lg:pt-5",
                     hideBorder && !isSecondarySidebarVisible && "border-transparent",
                 )}
             >

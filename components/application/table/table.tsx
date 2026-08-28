@@ -193,7 +193,7 @@ const TableHead = ({ className, tooltip, label, children, ...props }: TableHeadP
 
                     {tooltip && (
                         <Tooltip title={tooltip} placement="top">
-                            <TooltipTrigger className="cursor-pointer text-fg-quaternary transition duration-100 ease-linear hover:text-fg-quaternary_hover focus:text-fg-quaternary_hover">
+                            <TooltipTrigger className="cursor-pointer text-fg-quaternary transition hover:text-fg-quaternary_hover focus:text-fg-quaternary_hover">
                                 <HelpCircle className="size-4" />
                             </TooltipTrigger>
                         </Tooltip>

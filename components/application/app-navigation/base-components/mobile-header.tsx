@@ -22,8 +22,8 @@ export const MobileNavigationHeader = ({ children }: PropsWithChildren) => {
                     aria-label="Expand navigation menu"
                     className="group flex items-center justify-center rounded-md bg-primary p-2 text-fg-secondary outline-focus-ring hover:bg-primary_hover hover:text-fg-secondary_hover focus-visible:outline-2 focus-visible:outline-offset-2"
                 >
-                    <Menu02 className="size-6 transition duration-200 ease-in-out group-aria-expanded:opacity-0" />
-                    <CloseIcon className="absolute size-6 opacity-0 transition duration-200 ease-in-out group-aria-expanded:opacity-100" />
+                    <Menu02 className="size-6 transition duration-slow ease-in-out group-aria-expanded:opacity-0" />
+                    <CloseIcon className="absolute size-6 opacity-0 transition duration-slow ease-in-out group-aria-expanded:opacity-100" />
                 </AriaButton>
             </header>
 
