@@ -258,13 +258,23 @@ import { Home01 } from "@untitledui-pro/icons/solid";
 
 ### CSS Transitions
 
-For default small transition actions (hover states, color changes, etc.), use:
+**Hover and other state changes are instant — no duration, no easing.** Use the bare utility:
 
 ```typescript
-className = "transition duration-100 ease-linear";
+className = "transition";
 ```
 
-This provides a snappy 100ms linear transition that feels responsive without being jarring.
+This isn't an omission. `--default-transition-duration` / `--default-transition-timing-function`
+in `styles/theme.css` resolve it to `0ms linear`, so every hover in the library lands with no
+fade — which reads as more responsive than a delay does. Retiming every hover at once is a
+one-line change to those two tokens; don't add `duration-*`/`ease-*` back at a call site to
+"fix" a hover — that's the 53-site duplication this convention replaced.
+
+**The `--transition-duration-*` / `--ease-*` scale is for movement and overlays only — never
+hover.** Reach for it when the transition _is_ the state change, not decoration: a sliding
+toggle knob, a modal or popover entering/exiting. See **Foundations → Motion** in Storybook for
+the scale, the shared overlay presets (popover / modal / drawer), and why. `TOKENS.md` §8 covers
+where these tokens live relative to the Figma-synced ones.
 
 ### Loading States
 
