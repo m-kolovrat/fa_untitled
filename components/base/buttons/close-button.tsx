@@ -12,8 +12,8 @@ const sizes = {
 };
 
 const themes = {
-    light: "text-fg-quaternary hover:bg-primary_hover hover:text-fg-quaternary_hover focus-visible:outline-2 focus-visible:outline-offset-2 outline-focus-ring",
-    dark: "text-fg-white/70 hover:text-fg-white hover:bg-white/20 focus-visible:outline-2 focus-visible:outline-offset-2 outline-focus-ring",
+    light: "text-fg-quaternary hover:bg-primary_hover hover:text-fg-quaternary_hover touch-pressed:bg-primary_hover focus-visible:outline-2 focus-visible:outline-offset-2 outline-focus-ring",
+    dark: "text-fg-white/70 hover:text-fg-white hover:bg-white/20 touch-pressed:bg-white/20 focus-visible:outline-2 focus-visible:outline-offset-2 outline-focus-ring",
 };
 
 interface CloseButtonProps extends AriaButtonProps {
@@ -38,7 +38,7 @@ export const CloseButton = ({ label, className, size = "sm", theme = "light", sl
             aria-label={label || "Close"}
             className={(state) =>
                 cx(
-                    "flex cursor-pointer items-center justify-center rounded-md p-2 transition duration-100 ease-linear focus:outline-hidden",
+                    "flex cursor-pointer items-center justify-center rounded-md p-2 transition focus:outline-hidden",
                     sizes[size].root,
                     themes[theme],
                     typeof className === "function" ? className(state) : className,

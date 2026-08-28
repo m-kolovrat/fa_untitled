@@ -215,7 +215,7 @@ const MultiSelectRoot = ({
                         onClick={onResize}
                         className={(state) =>
                             cx(
-                                "relative flex w-full cursor-pointer items-center rounded-md bg-primary shadow-xs ring-1 ring-primary outline-hidden transition duration-100 ease-linear ring-inset",
+                                "relative flex w-full cursor-pointer items-center rounded-md bg-primary shadow-xs ring-1 ring-primary outline-hidden transition ring-inset",
                                 (state.isFocusVisible || state.isPressed) && "ring-2 ring-brand",
                                 state.isDisabled && "cursor-not-allowed opacity-50",
                             )
@@ -255,9 +255,9 @@ const MultiSelectRoot = ({
                             cx(
                                 "w-(--trigger-width) origin-(--trigger-anchor-point) overflow-hidden rounded-md bg-primary shadow-lg ring-1 ring-secondary_alt outline-hidden will-change-transform",
                                 state.isEntering &&
-                                    "duration-150 ease-out animate-in fade-in placement-top:slide-in-from-bottom-0.5 placement-bottom:slide-in-from-top-0.5",
+                                    "duration-moderate ease-out animate-in fade-in placement-top:slide-in-from-bottom-0.5 placement-bottom:slide-in-from-top-0.5",
                                 state.isExiting &&
-                                    "duration-100 ease-in animate-out fade-out placement-top:slide-out-to-bottom-0.5 placement-bottom:slide-out-to-top-0.5",
+                                    "duration-fast ease-out animate-out fade-out placement-top:slide-out-to-bottom-0.5 placement-bottom:slide-out-to-top-0.5",
                                 popoverClassName,
                             )
                         }

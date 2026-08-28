@@ -91,7 +91,7 @@ const DropdownItem = ({ label, children, addon, icon: Icon, avatarUrl, unstyled,
             {(state) => (
                 <div
                     className={cx(
-                        "relative flex items-center rounded-sm px-2.5 py-2 outline-focus-ring transition duration-100 ease-linear",
+                        "relative flex items-center rounded-sm px-2.5 py-2 outline-focus-ring transition",
                         !state.isDisabled && "group-hover:bg-primary_hover",
                         state.isFocused && "bg-primary_hover",
                         state.isFocusVisible && "outline-2 -outline-offset-2",
@@ -147,9 +147,9 @@ const DropdownPopover = (props: DropdownPopoverProps) => {
                 cx(
                     "w-62 origin-(--trigger-anchor-point) overflow-auto rounded-md bg-primary shadow-lg ring-1 ring-secondary_alt will-change-transform",
                     state.isEntering &&
-                        "duration-150 ease-out animate-in fade-in placement-right:slide-in-from-left-0.5 placement-top:slide-in-from-bottom-0.5 placement-bottom:slide-in-from-top-0.5",
+                        "duration-moderate ease-out animate-in fade-in placement-right:slide-in-from-left-0.5 placement-top:slide-in-from-bottom-0.5 placement-bottom:slide-in-from-top-0.5",
                     state.isExiting &&
-                        "duration-100 ease-in animate-out fade-out placement-right:slide-out-to-left-0.5 placement-top:slide-out-to-bottom-0.5 placement-bottom:slide-out-to-top-0.5",
+                        "duration-fast ease-out animate-out fade-out placement-right:slide-out-to-left-0.5 placement-top:slide-out-to-bottom-0.5 placement-bottom:slide-out-to-top-0.5",
                     typeof props.className === "function" ? props.className(state) : props.className,
                 )
             }
@@ -170,7 +170,7 @@ const DropdownDotsButton = (props: AriaButtonProps & RefAttributes<HTMLButtonEle
             aria-label="Open menu"
             className={(state) =>
                 cx(
-                    "cursor-pointer rounded-sm text-fg-quaternary outline-focus-ring transition duration-100 ease-linear",
+                    "cursor-pointer rounded-sm text-fg-quaternary outline-focus-ring transition",
                     (state.isPressed || state.isHovered) && "text-fg-quaternary_hover",
                     (state.isPressed || state.isFocusVisible) && "outline-2 outline-offset-2",
                     typeof props.className === "function" ? props.className(state) : props.className,

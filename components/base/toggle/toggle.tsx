@@ -44,7 +44,7 @@ export const ToggleBase = ({ className, isHovered, isDisabled, isFocusVisible, i
     return (
         <div
             className={cx(
-                "cursor-pointer rounded-full bg-tertiary ring-[0.5px] ring-secondary outline-focus-ring transition duration-150 ease-linear ring-inset",
+                "cursor-pointer rounded-full bg-tertiary ring-[0.5px] ring-secondary outline-focus-ring transition ring-inset",
                 isSelected && "bg-brand-solid",
                 isSelected && isHovered && "bg-brand-solid_hover",
                 isDisabled && "cursor-not-allowed opacity-50",
@@ -57,11 +57,10 @@ export const ToggleBase = ({ className, isHovered, isDisabled, isFocusVisible, i
             )}
         >
             <div
-                style={{
-                    transition: "transform 0.15s ease-in-out, translate 0.15s ease-in-out, border-color 0.1s linear, background-color 0.1s linear",
-                }}
                 className={cx(
-                    "rounded-full bg-fg-white shadow-sm",
+                    // The knob's travel is the state change itself, so it keeps its motion
+                    // while every hover in the library is instant.
+                    "rounded-full bg-fg-white shadow-sm transition duration-moderate ease-in-out",
 
                     slim && "shadow-xs",
                     slim && "border border-toggle-border",

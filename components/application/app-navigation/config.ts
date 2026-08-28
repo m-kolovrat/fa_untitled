@@ -21,3 +21,9 @@ export type NavItemDividerType = Omit<NavItemType, "icon" | "label" | "divider">
     /** Whether this nav item is a divider. */
     divider: true;
 };
+
+/**
+ * Spring for the expanding secondary sidebar, shared by `sidebar-slim` and
+ * `sidebar-dual-tier` so the two cannot drift apart.
+ */
+export const SECONDARY_SIDEBAR_SPRING = { type: "spring", damping: 26, stiffness: 220, bounce: 0 } as const;

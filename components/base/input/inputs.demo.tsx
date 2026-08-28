@@ -170,10 +170,7 @@ export const PasswordInputDemo = () => {
             <InputBase icon={Lock03} type="password" placeholder="••••••••••••" />
             <HintText className="flex items-center gap-1">
                 <CheckCircle
-                    className={cx(
-                        "size-4 stroke-[2.25px] text-fg-quaternary transition duration-100 ease-linear in-invalid:hidden",
-                        password.length >= 8 && "text-fg-success-primary",
-                    )}
+                    className={cx("size-4 stroke-[2.25px] text-fg-quaternary transition in-invalid:hidden", password.length >= 8 && "text-fg-success-primary")}
                 />
                 <AlertCircle className="hidden size-4 stroke-[2.25px] text-fg-error-secondary in-invalid:inline-block" />
                 Must be at least 8 characters.
@@ -1195,7 +1192,7 @@ export const PasswordInputs = () => {
                     <HintText className="flex items-center gap-1">
                         <CheckCircle
                             className={cx(
-                                "size-4 stroke-[2.25px] text-fg-quaternary transition duration-100 ease-linear in-invalid:hidden",
+                                "size-4 stroke-[2.25px] text-fg-quaternary transition in-invalid:hidden",
                                 password.length >= 8 && "text-fg-success-primary",
                             )}
                         />
@@ -1209,7 +1206,7 @@ export const PasswordInputs = () => {
                     <HintText className="flex items-center gap-1">
                         <CheckCircle
                             className={cx(
-                                "size-4 stroke-[2.25px] text-fg-quaternary transition duration-100 ease-linear in-invalid:hidden",
+                                "size-4 stroke-[2.25px] text-fg-quaternary transition in-invalid:hidden",
                                 password.length >= 8 && "text-fg-success-primary",
                             )}
                         />
@@ -1223,7 +1220,7 @@ export const PasswordInputs = () => {
                     <HintText className="flex items-center gap-1">
                         <CheckCircle
                             className={cx(
-                                "size-4 stroke-[2.25px] text-fg-quaternary transition duration-100 ease-linear in-invalid:hidden",
+                                "size-4 stroke-[2.25px] text-fg-quaternary transition in-invalid:hidden",
                                 password.length >= 8 && "text-fg-success-primary",
                             )}
                         />
@@ -1239,7 +1236,7 @@ export const PasswordInputs = () => {
                     <HintText className="flex items-center gap-1">
                         <CheckCircle
                             className={cx(
-                                "size-4 stroke-[2.25px] text-fg-quaternary transition duration-100 ease-linear in-invalid:hidden",
+                                "size-4 stroke-[2.25px] text-fg-quaternary transition in-invalid:hidden",
                                 password.length >= 8 && "text-fg-success-primary",
                             )}
                         />
@@ -1253,7 +1250,7 @@ export const PasswordInputs = () => {
                     <HintText className="flex items-center gap-1">
                         <CheckCircle
                             className={cx(
-                                "size-4 stroke-[2.25px] text-fg-quaternary transition duration-100 ease-linear in-invalid:hidden",
+                                "size-4 stroke-[2.25px] text-fg-quaternary transition in-invalid:hidden",
                                 password.length >= 8 && "text-fg-success-primary",
                             )}
                         />
@@ -1267,7 +1264,7 @@ export const PasswordInputs = () => {
                     <HintText className="flex items-center gap-1">
                         <CheckCircle
                             className={cx(
-                                "size-4 stroke-[2.25px] text-fg-quaternary transition duration-100 ease-linear in-invalid:hidden",
+                                "size-4 stroke-[2.25px] text-fg-quaternary transition in-invalid:hidden",
                                 password.length >= 8 && "text-fg-success-primary",
                             )}
                         />
@@ -1283,7 +1280,7 @@ export const PasswordInputs = () => {
                     <HintText className="flex items-center gap-1">
                         <CheckCircle
                             className={cx(
-                                "size-4 stroke-[2.25px] text-fg-quaternary transition duration-100 ease-linear in-invalid:hidden",
+                                "size-4 stroke-[2.25px] text-fg-quaternary transition in-invalid:hidden",
                                 password.length >= 8 && "text-fg-success-primary",
                             )}
                         />
@@ -1297,7 +1294,7 @@ export const PasswordInputs = () => {
                     <HintText className="flex items-center gap-1">
                         <CheckCircle
                             className={cx(
-                                "size-4 stroke-[2.25px] text-fg-quaternary transition duration-100 ease-linear in-invalid:hidden",
+                                "size-4 stroke-[2.25px] text-fg-quaternary transition in-invalid:hidden",
                                 password.length >= 8 && "text-fg-success-primary",
                             )}
                         />
@@ -1311,7 +1308,7 @@ export const PasswordInputs = () => {
                     <HintText className="flex items-center gap-1">
                         <CheckCircle
                             className={cx(
-                                "size-4 stroke-[2.25px] text-fg-quaternary transition duration-100 ease-linear in-invalid:hidden",
+                                "size-4 stroke-[2.25px] text-fg-quaternary transition in-invalid:hidden",
                                 password.length >= 8 && "text-fg-success-primary",
                             )}
                         />

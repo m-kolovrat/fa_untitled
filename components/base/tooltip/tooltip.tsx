@@ -63,7 +63,9 @@ export const Tooltip = ({
                 offset={offset}
                 placement={placement}
                 crossOffset={crossOffset ?? calculatedCrossOffset}
-                className={({ isEntering, isExiting }) => cx(isEntering && "ease-out animate-in", isExiting && "ease-in animate-out")}
+                className={({ isEntering, isExiting }) =>
+                    cx(isEntering && "duration-moderate ease-out animate-in", isExiting && "duration-fast ease-out animate-out")
+                }
             >
                 {({ isEntering, isExiting }) => (
                     <div
@@ -72,9 +74,9 @@ export const Tooltip = ({
                             description ? "py-3" : "py-2",
 
                             isEntering &&
-                                "ease-out animate-in fade-in zoom-in-95 in-placement-left:slide-in-from-right-0.5 in-placement-right:slide-in-from-left-0.5 in-placement-top:slide-in-from-bottom-0.5 in-placement-bottom:slide-in-from-top-0.5",
+                                "duration-moderate ease-out animate-in fade-in zoom-in-95 in-placement-left:slide-in-from-right-0.5 in-placement-right:slide-in-from-left-0.5 in-placement-top:slide-in-from-bottom-0.5 in-placement-bottom:slide-in-from-top-0.5",
                             isExiting &&
-                                "ease-in animate-out fade-out zoom-out-95 in-placement-left:slide-out-to-right-0.5 in-placement-right:slide-out-to-left-0.5 in-placement-top:slide-out-to-bottom-0.5 in-placement-bottom:slide-out-to-top-0.5",
+                                "duration-fast ease-out animate-out fade-out zoom-out-95 in-placement-left:slide-out-to-right-0.5 in-placement-right:slide-out-to-left-0.5 in-placement-top:slide-out-to-bottom-0.5 in-placement-bottom:slide-out-to-top-0.5",
                         )}
                     >
                         <span className="text-xs font-semibold text-white">{title}</span>

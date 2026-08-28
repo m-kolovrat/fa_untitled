@@ -10,7 +10,7 @@ import { isReactComponent } from "@/utils/is-react-component";
 export const styles = sortCx({
     common: {
         root: [
-            "group relative inline-flex h-max cursor-pointer items-center justify-center whitespace-nowrap outline-brand transition duration-100 ease-linear before:absolute focus-visible:outline-2 focus-visible:outline-offset-2",
+            "group relative inline-flex h-max cursor-pointer items-center justify-center whitespace-nowrap outline-brand transition before:absolute focus-visible:outline-2 focus-visible:outline-offset-2",
             // When button is used within `InputGroup`
             "in-data-input-wrapper:shadow-xs in-data-input-wrapper:focus:!z-50 in-data-input-wrapper:in-data-leading:-mr-px in-data-input-wrapper:in-data-leading:rounded-r-none in-data-input-wrapper:in-data-leading:before:rounded-r-none in-data-input-wrapper:in-data-trailing:-ml-px in-data-input-wrapper:in-data-trailing:rounded-l-none in-data-input-wrapper:in-data-trailing:before:rounded-l-none",
             // Disabled styles — Figma-accurate neutral tokens (shared text + icon across all hierarchies)
@@ -51,28 +51,28 @@ export const styles = sortCx({
     colors: {
         primary: {
             root: [
-                "bg-brand-solid text-white hover:bg-brand-solid_hover disabled:bg-disabled data-loading:bg-brand-solid_hover",
+                "bg-brand-solid text-white hover:bg-brand-solid_hover disabled:bg-disabled data-loading:bg-brand-solid_hover touch-pressed:bg-brand-solid_hover",
                 // Icon styles
                 "*:data-icon:text-button-primary-icon hover:*:data-icon:text-button-primary-icon_hover",
             ].join(" "),
         },
         secondary: {
             root: [
-                "bg-primary text-secondary ring-1 ring-primary ring-inset hover:bg-primary_hover disabled:bg-primary disabled:ring-disabled_subtle data-loading:bg-primary_hover",
+                "bg-primary text-secondary ring-1 ring-primary ring-inset hover:bg-primary_hover disabled:bg-primary disabled:ring-disabled_subtle data-loading:bg-primary_hover touch-pressed:bg-primary_hover",
                 // Icon styles
                 "*:data-icon:text-fg-secondary",
             ].join(" "),
         },
         tertiary: {
             root: [
-                "text-secondary hover:bg-primary_hover disabled:hover:bg-transparent data-loading:bg-primary_hover",
+                "text-secondary hover:bg-primary_hover disabled:hover:bg-transparent data-loading:bg-primary_hover touch-pressed:bg-primary_hover",
                 // Icon styles
                 "*:data-icon:text-fg-secondary",
             ].join(" "),
         },
         "link-color": {
             root: [
-                "justify-normal rounded p-0! text-brand-tertiary hover:text-brand-secondary_hover",
+                "justify-normal rounded p-0! text-brand-tertiary hover:text-brand-secondary_hover touch-pressed:text-brand-secondary_hover",
                 // Inner text underline
                 "*:data-text:underline *:data-text:decoration-transparent hover:*:data-text:decoration-fg-brand-secondary_alt",
                 // Icon styles
@@ -81,7 +81,7 @@ export const styles = sortCx({
         },
         "link-gray": {
             root: [
-                "justify-normal rounded p-0! text-tertiary hover:text-tertiary_hover",
+                "justify-normal rounded p-0! text-tertiary hover:text-tertiary_hover touch-pressed:text-tertiary_hover",
                 // Inner text underline
                 "*:data-text:underline *:data-text:decoration-transparent hover:*:data-text:decoration-fg-quaternary",
                 // Icon styles
@@ -90,28 +90,28 @@ export const styles = sortCx({
         },
         "primary-destructive": {
             root: [
-                "bg-error-solid text-white outline-error hover:bg-error-solid_hover disabled:bg-disabled data-loading:bg-error-solid_hover",
+                "bg-error-solid text-white outline-error hover:bg-error-solid_hover disabled:bg-disabled data-loading:bg-error-solid_hover touch-pressed:bg-error-solid_hover",
                 // Icon styles
                 "*:data-icon:text-button-destructive-primary-icon hover:*:data-icon:text-button-destructive-primary-icon_hover",
             ].join(" "),
         },
         "secondary-destructive": {
             root: [
-                "bg-primary text-error-primary ring-1 ring-error_subtle outline-error ring-inset hover:bg-error-primary hover:text-error-primary_hover disabled:bg-primary disabled:ring-disabled_subtle data-loading:bg-error-primary",
+                "bg-primary text-error-primary ring-1 ring-error_subtle outline-error ring-inset hover:bg-error-primary hover:text-error-primary_hover disabled:bg-primary disabled:ring-disabled_subtle data-loading:bg-error-primary touch-pressed:bg-error-primary",
                 // Icon styles
                 "*:data-icon:text-fg-error-secondary hover:*:data-icon:text-fg-error-primary",
             ].join(" "),
         },
         "tertiary-destructive": {
             root: [
-                "text-error-primary outline-error hover:bg-error-primary hover:text-error-primary_hover disabled:hover:bg-transparent data-loading:bg-error-primary",
+                "text-error-primary outline-error hover:bg-error-primary hover:text-error-primary_hover disabled:hover:bg-transparent data-loading:bg-error-primary touch-pressed:bg-error-primary",
                 // Icon styles
                 "*:data-icon:text-fg-error-secondary hover:*:data-icon:text-fg-error-primary",
             ].join(" "),
         },
         "link-destructive": {
             root: [
-                "justify-normal rounded p-0! text-error-primary outline-error hover:text-error-primary_hover",
+                "justify-normal rounded p-0! text-error-primary outline-error hover:text-error-primary_hover touch-pressed:text-error-primary_hover",
                 // Inner text underline
                 "*:data-text:underline *:data-text:decoration-transparent *:data-text:underline-offset-2 hover:*:data-text:decoration-current",
                 // Icon styles

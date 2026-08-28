@@ -30,7 +30,7 @@ export const TextAreaBase = ({ className, size = "md", ...props }: TextAreaBaseP
             }
             className={(state) =>
                 cx(
-                    "w-full scroll-py-3 rounded-md bg-primary text-primary shadow-xs ring-1 ring-primary transition duration-100 ease-linear ring-inset placeholder:text-placeholder autofill:rounded-md autofill:text-primary focus:outline-hidden",
+                    "w-full scroll-py-3 rounded-md bg-primary text-primary shadow-xs ring-1 ring-primary transition ring-inset placeholder:text-placeholder autofill:rounded-md autofill:text-primary focus:outline-hidden",
 
                     size === "sm" && "p-3 text-sm",
                     size === "md" && "px-3.5 py-3 text-md",

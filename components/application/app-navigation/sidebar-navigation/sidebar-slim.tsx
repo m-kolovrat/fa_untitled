@@ -3,7 +3,7 @@
 import type { FC } from "react";
 import { useState } from "react";
 import { DotsVertical, LifeBuoy01, Settings01 } from "@untitledui/icons";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, MotionConfig, motion } from "motion/react";
 import { Button as AriaButton, DialogTrigger as AriaDialogTrigger, Popover as AriaPopover } from "react-aria-components";
 import { Avatar } from "@/components/base/avatar/avatar";
 import { ButtonUtility } from "@/components/base/buttons/button-utility";
@@ -16,6 +16,7 @@ import { NavButton } from "../base-components/nav-button";
 import { NavItemBase } from "../base-components/nav-item";
 import { NavList } from "../base-components/nav-list";
 import type { NavItemType } from "../config";
+import { SECONDARY_SIDEBAR_SPRING } from "../config";
 
 interface SidebarNavigationSlimProps {
     /** URL of the currently active item. */
@@ -45,14 +46,11 @@ export const SidebarNavigationSlim = ({ activeUrl, items, footerItems = [], hide
             style={{
                 width: MAIN_SIDEBAR_WIDTH,
             }}
-            className={cx(
-                "group flex h-full max-h-full max-w-full overflow-y-auto py-1 pl-1 transition duration-100 ease-linear",
-                isSecondarySidebarVisible && "bg-primary",
-            )}
+            className={cx("group flex h-full max-h-full max-w-full overflow-y-auto py-1 pl-1 transition", isSecondarySidebarVisible && "bg-primary")}
         >
             <div
                 className={cx(
-                    "flex w-auto flex-col justify-between rounded-xl bg-primary pt-5 ring-1 ring-secondary transition duration-300 ring-inset",
+                    "flex w-auto flex-col justify-between rounded-xl bg-primary pt-5 ring-1 ring-secondary transition duration-slower ring-inset",
                     hideBorder && !isSecondarySidebarVisible && "ring-transparent",
                 )}
             >
@@ -112,9 +110,9 @@ export const SidebarNavigationSlim = ({ activeUrl, items, footerItems = [], hide
                                 cx(
                                     "will-change-transform",
                                     isEntering &&
-                                        "duration-300 ease-out animate-in fade-in placement-right:slide-in-from-left-2 placement-top:slide-in-from-bottom-2 placement-bottom:slide-in-from-top-2",
+                                        "duration-moderate ease-out animate-in fade-in placement-right:slide-in-from-left-2 placement-top:slide-in-from-bottom-2 placement-bottom:slide-in-from-top-2",
                                     isExiting &&
-                                        "duration-150 ease-in animate-out fade-out placement-right:slide-out-to-left-2 placement-top:slide-out-to-bottom-2 placement-bottom:slide-out-to-top-2",
+                                        "duration-fast ease-out animate-out fade-out placement-right:slide-out-to-left-2 placement-top:slide-out-to-bottom-2 placement-bottom:slide-out-to-top-2",
                                 )
                             }
                         >
@@ -127,42 +125,44 @@ export const SidebarNavigationSlim = ({ activeUrl, items, footerItems = [], hide
     );
 
     const secondarySidebar = currentItem && (
-        <AnimatePresence initial={false}>
-            {isSecondarySidebarVisible && (
-                <motion.div
-                    initial={{ width: 0, borderColor: "var(--color-border-secondary)" }}
-                    animate={{ width: SECONDARY_SIDEBAR_WIDTH, borderColor: "var(--color-border-secondary)" }}
-                    exit={{ width: 0, borderColor: "rgba(0,0,0,0)", transition: { borderColor: { type: "tween", delay: 0.05 } } }}
-                    transition={{ type: "spring", damping: 26, stiffness: 220, bounce: 0 }}
-                    className={cx(
-                        "relative h-full overflow-x-hidden overflow-y-auto bg-primary",
-                        !(hideBorder || hideRightBorder) && "box-content border-r-[1.5px]",
-                    )}
-                >
-                    <div style={{ width: SECONDARY_SIDEBAR_WIDTH }} className="flex h-full flex-col px-4 pt-6">
-                        <h3 className="text-sm font-semibold text-brand-secondary">{currentItem.label}</h3>
-                        <ul className="py-2">
-                            {currentItem.items?.map((item) => (
-                                <li key={item.label} className="py-px">
-                                    <NavItemBase current={activeUrl === item.href} href={item.href} icon={item.icon} badge={item.badge} type="link">
-                                        {item.label}
-                                    </NavItemBase>
-                                </li>
-                            ))}
-                        </ul>
-                        <div className="sticky bottom-0 mt-auto flex justify-between bg-primary pb-5">
-                            <div>
-                                <p className="text-sm font-semibold text-primary">Olivia Rhye</p>
-                                <p className="text-sm text-tertiary">olivia@untitledui.com</p>
-                            </div>
-                            <div className="absolute -top-1 right-0">
-                                <ButtonUtility size="xs" color="tertiary" tooltip="Log out" icon={DotsVertical} />
+        <MotionConfig reducedMotion="user">
+            <AnimatePresence initial={false}>
+                {isSecondarySidebarVisible && (
+                    <motion.div
+                        initial={{ width: 0, borderColor: "var(--color-border-secondary)" }}
+                        animate={{ width: SECONDARY_SIDEBAR_WIDTH, borderColor: "var(--color-border-secondary)" }}
+                        exit={{ width: 0, borderColor: "rgba(0,0,0,0)", transition: { borderColor: { type: "tween", delay: 0.05 } } }}
+                        transition={SECONDARY_SIDEBAR_SPRING}
+                        className={cx(
+                            "relative h-full overflow-x-hidden overflow-y-auto bg-primary",
+                            !(hideBorder || hideRightBorder) && "box-content border-r-[1.5px]",
+                        )}
+                    >
+                        <div style={{ width: SECONDARY_SIDEBAR_WIDTH }} className="flex h-full flex-col px-4 pt-6">
+                            <h3 className="text-sm font-semibold text-brand-secondary">{currentItem.label}</h3>
+                            <ul className="py-2">
+                                {currentItem.items?.map((item) => (
+                                    <li key={item.label} className="py-px">
+                                        <NavItemBase current={activeUrl === item.href} href={item.href} icon={item.icon} badge={item.badge} type="link">
+                                            {item.label}
+                                        </NavItemBase>
+                                    </li>
+                                ))}
+                            </ul>
+                            <div className="sticky bottom-0 mt-auto flex justify-between bg-primary pb-5">
+                                <div>
+                                    <p className="text-sm font-semibold text-primary">Olivia Rhye</p>
+                                    <p className="text-sm text-tertiary">olivia@untitledui.com</p>
+                                </div>
+                                <div className="absolute -top-1 right-0">
+                                    <ButtonUtility size="xs" color="tertiary" tooltip="Log out" icon={DotsVertical} />
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </motion.div>
-            )}
-        </AnimatePresence>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </MotionConfig>
     );
 
     return (
