@@ -3,7 +3,7 @@
 import type { ReactNode } from "react";
 import { useState } from "react";
 import { SearchLg } from "@untitledui/icons";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, MotionConfig, motion } from "motion/react";
 import { Input } from "@/components/base/input/input";
 import { UntitledLogo } from "@/components/foundations/logo/untitledui-logo";
 import { cx } from "@/utils/cx";
@@ -12,6 +12,7 @@ import { NavAccountCard, type NavAccountType } from "../base-components/nav-acco
 import { NavItemBase } from "../base-components/nav-item";
 import { NavList } from "../base-components/nav-list";
 import type { NavItemType } from "../config";
+import { SECONDARY_SIDEBAR_SPRING } from "../config";
 
 interface SidebarNavigationDualTierProps {
     /** URL of the currently active item. */
@@ -118,27 +119,29 @@ export const SidebarNavigationDualTier = ({
     );
 
     const secondarySidebar = (
-        <AnimatePresence initial={false}>
-            {isSecondarySidebarVisible && currentItem?.items && (
-                <motion.div
-                    initial={{ width: 0, borderColor: "var(--color-border-secondary)" }}
-                    animate={{ width: SECONDARY_SIDEBAR_WIDTH, borderColor: "var(--color-border-secondary)" }}
-                    exit={{ width: 0, borderColor: "rgba(0,0,0,0)", transition: { borderColor: { type: "tween", delay: 0.05 } } }}
-                    transition={{ type: "spring", damping: 26, stiffness: 220, bounce: 0 }}
-                    className={cx("relative h-full overflow-x-hidden overflow-y-auto bg-primary", !hideBorder && "box-content border-r-[1.5px]")}
-                >
-                    <ul style={{ width: SECONDARY_SIDEBAR_WIDTH }} className="flex h-full flex-col p-4 pt-5">
-                        {currentItem.items.map((item) => (
-                            <li key={item.label + item.href} className="py-px">
-                                <NavItemBase current={activeUrl === item.href} href={item.href} icon={item.icon} badge={item.badge} type="link">
-                                    {item.label}
-                                </NavItemBase>
-                            </li>
-                        ))}
-                    </ul>
-                </motion.div>
-            )}
-        </AnimatePresence>
+        <MotionConfig reducedMotion="user">
+            <AnimatePresence initial={false}>
+                {isSecondarySidebarVisible && currentItem?.items && (
+                    <motion.div
+                        initial={{ width: 0, borderColor: "var(--color-border-secondary)" }}
+                        animate={{ width: SECONDARY_SIDEBAR_WIDTH, borderColor: "var(--color-border-secondary)" }}
+                        exit={{ width: 0, borderColor: "rgba(0,0,0,0)", transition: { borderColor: { type: "tween", delay: 0.05 } } }}
+                        transition={SECONDARY_SIDEBAR_SPRING}
+                        className={cx("relative h-full overflow-x-hidden overflow-y-auto bg-primary", !hideBorder && "box-content border-r-[1.5px]")}
+                    >
+                        <ul style={{ width: SECONDARY_SIDEBAR_WIDTH }} className="flex h-full flex-col p-4 pt-5">
+                            {currentItem.items.map((item) => (
+                                <li key={item.label + item.href} className="py-px">
+                                    <NavItemBase current={activeUrl === item.href} href={item.href} icon={item.icon} badge={item.badge} type="link">
+                                        {item.label}
+                                    </NavItemBase>
+                                </li>
+                            ))}
+                        </ul>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </MotionConfig>
     );
 
     return (

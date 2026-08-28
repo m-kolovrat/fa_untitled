@@ -10,6 +10,17 @@
 @custom-variant label (& [data-label]);
 @custom-variant focus-input-within (&:has(input:focus));
 
+/* Touch devices never fire `hover:` — Tailwind v4 gates it behind `@media (hover: hover)` —
+   so without this a tap gives no feedback at all until the action completes. Instant and
+   colour-only by design: no scale, no easing. Desktop is deliberately untouched. */
+@custom-variant touch-pressed {
+    @media (hover: none) {
+        &[data-pressed] {
+            @slot;
+        }
+    }
+}
+
 @utility scrollbar-hide {
     /* For Webkit-based browsers (Chrome, Safari and Opera) */
     &::-webkit-scrollbar {
@@ -26,6 +37,32 @@
     transition-property: inherit;
     transition-duration: inherit;
     transition-timing-function: inherit;
+}
+
+/* Reduced motion: reduce, don't eliminate.
+   tailwindcss-animate composes every enter/exit from separate opacity and movement
+   variables, so neutralising only the movement leaves each overlay as a plain fade —
+   which still explains that something appeared, without the travel that causes
+   motion sickness. Looping affordances that aid comprehension (spinners, the pin-input
+   caret) are deliberately left running; the empty-state marquee stops via its own
+   `motion-reduce:animate-none`. */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        --tw-enter-translate-x: 0 !important;
+        --tw-enter-translate-y: 0 !important;
+        --tw-enter-scale: 1 !important;
+        --tw-enter-rotate: 0 !important;
+        --tw-exit-translate-x: 0 !important;
+        --tw-exit-translate-y: 0 !important;
+        --tw-exit-scale: 1 !important;
+        --tw-exit-rotate: 0 !important;
+
+        /* Movement-driven transitions (toggle knob, sidebar containers) snap instead of
+           travelling. Hover is already instant, so this costs nothing elsewhere. */
+        transition-duration: 0.01ms !important;
+    }
 }
 
 html,

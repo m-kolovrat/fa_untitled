@@ -32,8 +32,8 @@ export const MobileNavigationHeader = ({ children }: PropsWithChildren) => {
                 className={({ isEntering, isExiting }) =>
                     cx(
                         "fixed inset-0 z-50 cursor-pointer bg-overlay/70 pr-16 backdrop-blur-md lg:hidden",
-                        isEntering && "duration-300 ease-in-out animate-in fade-in",
-                        isExiting && "duration-200 ease-in-out animate-out fade-out",
+                        isEntering && "duration-slower ease-drawer animate-in fade-in",
+                        isExiting && "duration-slow ease-drawer animate-out fade-out",
                     )
                 }
             >
