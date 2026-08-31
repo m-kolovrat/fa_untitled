@@ -30,6 +30,7 @@ export const parameters = {
                 "Base components",
                 [
                     "Buttons",
+                    ["Button", "Mobile app store buttons", "Social buttons"],
                     "Button groups",
                     "Badges",
                     "Badge groups",

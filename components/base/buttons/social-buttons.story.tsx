@@ -2,7 +2,7 @@ import type { FC } from "react";
 import * as Buttons from "./social-buttons.demo";
 
 export default {
-    title: "Base components/Buttons",
+    title: "Base components/Buttons/Social buttons",
     excludeStories: ["GoogleLogo", "GoogleButton", "FacebookButton", "AppleButton"],
     decorators: [
         (Story: FC) => (
