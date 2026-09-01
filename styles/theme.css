@@ -257,18 +257,18 @@
     --color-pink-950: rgb(78 13 48); /* #4E0D30 */
 
     /* FA orange-dark — canonical ramp from Figma (orange-dark 25–950) */
-    --color-orange-dark-25: rgb(255 249 245); /* #FFF9F5 */
-    --color-orange-dark-50: rgb(255 244 237); /* #FFF4ED */
-    --color-orange-dark-100: rgb(255 230 213); /* #FFE6D5 */
-    --color-orange-dark-200: rgb(255 214 174); /* #FFD6AE */
-    --color-orange-dark-300: rgb(255 156 102); /* #FF9C66 */
-    --color-orange-dark-400: rgb(255 105 46); /* #FF692E */
-    --color-orange-dark-500: rgb(255 68 5); /* #FF4405 */
-    --color-orange-dark-600: rgb(230 46 5); /* #E62E05 */
-    --color-orange-dark-700: rgb(188 27 6); /* #BC1B06 */
-    --color-orange-dark-800: rgb(151 24 12); /* #97180C */
-    --color-orange-dark-900: rgb(119 26 13); /* #771A0D */
-    --color-orange-dark-950: rgb(87 19 10); /* #57130A */
+    --color-orange-dark-25: rgb(255 249 243); /* #FFF9F3 */
+    --color-orange-dark-50: rgb(255 242 229); /* #FFF2E5 */
+    --color-orange-dark-100: rgb(255 227 201); /* #FFE3C9 */
+    --color-orange-dark-200: rgb(255 204 159); /* #FFCC9F */
+    --color-orange-dark-300: rgb(255 164 89); /* #FFA459 */
+    --color-orange-dark-400: rgb(245 120 0); /* #F57800 */
+    --color-orange-dark-500: rgb(223 100 0); /* #DF6400 */
+    --color-orange-dark-600: rgb(198 88 21); /* #C65815 */
+    --color-orange-dark-700: rgb(171 65 0); /* #AB4100 */
+    --color-orange-dark-800: rgb(143 46 0); /* #8F2E00 */
+    --color-orange-dark-900: rgb(114 32 0); /* #722000 */
+    --color-orange-dark-950: rgb(82 22 3); /* #521603 */
 
     /* FA teal — canonical ramp from Figma (teal 25–950). Unreferenced; retained intentionally. */
     --color-teal-25: rgb(246 254 252); /* #F6FEFC */
