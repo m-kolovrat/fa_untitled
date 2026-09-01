@@ -1,5 +1,3 @@
-[![Untitled UI React](https://www.untitledui.com/react/untitled-ui-react-open-graph.jpg)](https://www.untitledui.com/react)
-
 # Untitled UI React
 
 [Untitled UI React](https://www.untitledui.com/react) is the world’s largest collection of open-source React components built with Tailwind CSS and React Aria. Everything you need to design and develop modern, beautiful interfaces—fast. Just copy, paste, and build.
