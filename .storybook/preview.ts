@@ -58,6 +58,7 @@ export const parameters = {
                     "Charts",
                     "Slideout menus",
                     "Pagination",
+                    "Breadcrumbs",
                     "Carousels",
                     "Tabs",
                     "Tables",
